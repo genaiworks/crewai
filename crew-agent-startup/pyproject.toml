@@ -1,0 +1,27 @@
+[tool.poetry]
+name="crew-agents"
+version="0.1.0"
+description="Simple AI trip planner"
+authors=["GenAI"]
+
+[tool.poetry.dependencies]
+python=">=3.10.0,<3.12"
+crewai = "0.1.24"
+unstructured='==0.10.25'
+pyowm='3.3.0'
+python-dotenv='1.0.0'
+langchain-openai = "0.0.5"
+
+[tool.pyright]
+#https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes=true
+exclude=[".cache"]
+
+[tool.ruff]
+#https://docs.astral.sh/ruff/configuration/#config-file-discovery
+select =['E','W','F','I','B','C4','ARG','SIM']
+ignore=['W291','W292','W293']
+
+[build-system]
+requires=["poetry-core>=1.1.0"]
+build-backend ="poetry.core.masonry.api"
