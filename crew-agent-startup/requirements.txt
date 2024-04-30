@@ -1,2 +1,3 @@
 crewai
 langchain_google_genai
+praw
